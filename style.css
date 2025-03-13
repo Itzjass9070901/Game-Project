@@ -1,79 +1,473 @@
-/* Import Google font */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Orbitron', sans-serif;
+  transition: background 0.5s ease, color 0.5s ease;
 }
+
 body {
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: #E3F2FD;
+  flex-direction: column;
+  overflow: hidden;
 }
+
+/* === INTRO SCREEN === */
+.intro-screen {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  text-align: center;
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+/* === THEME SWITCHER === */
+.theme-switcher {
+  margin-top: 20px;
+}
+
+.theme-btn {
+  margin: 5px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.theme-btn:hover {
+  opacity: 0.8;
+}
+
+/* === GAME CONTAINER === */
 .wrapper {
-  width: 65vmin;
+  width: 70vmin;
   height: 70vmin;
   display: flex;
-  overflow: hidden;
   flex-direction: column;
   justify-content: center;
-  border-radius: 5px;
-  background: #293447;
-  box-shadow: 0 20px 40px rgba(52, 87, 220, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  border: 2px solid;
 }
+
+/* === SCOREBOARD === */
 .game-details {
-  color: #B8C6DC;
-  font-weight: 500;
-  font-size: 1.2rem;
-  padding: 20px 27px;
+  font-weight: 700;
+  font-size: 1.4rem;
+  padding: 15px 20px;
   display: flex;
   justify-content: space-between;
+  text-transform: uppercase;
 }
+
+/* === GAME BOARD === */
 .play-board {
   height: 100%;
   width: 100%;
   display: grid;
-  background: #212837;
   grid-template: repeat(30, 1fr) / repeat(30, 1fr);
 }
+
+/* === SNAKE & FOOD === */
 .play-board .food {
-  background: #00FFFF;
+  border-radius: 50%;
 }
+
 .play-board .head {
-  background: #C8A2C8;
+  box-shadow: 0 0 10px;
 }
 
-.controls {
-  display: none;
-  justify-content: space-between;
+/* === THEMES === */
+
+/*  Solar Eclipse (Default) */
+.solar-theme {
+  background: #1e0f00;
+  color: #ff9800;
 }
-.controls i {
-  padding: 25px 0;
+
+.solar-theme .intro-screen {
+  background: rgba(30, 15, 0, 0.9);
+}
+
+.solar-theme .theme-btn {
+  background: #ff9800;
+  color: #1e0f00;
+}
+
+.solar-theme .wrapper {
+  background: #260e04;
+  border-color: #ff9800;
+}
+
+.solar-theme .game-details {
+  color: #ffcc80;
+}
+
+.solar-theme .play-board {
+  background: #120802;
+}
+
+.solar-theme .food {
+  background: #ff4500;
+  box-shadow: 0 0 15px #ff4500;
+}
+
+.solar-theme .head {
+  background: #ffcc00;
+  box-shadow: 0 0 10px #ffcc00;
+}
+
+  
+.solar-theme .start-button {
+  background: #ff9800;
+  color: #1e0f00;
+  border: 2px solid #ffcc80;
+}
+
+.solar-theme .start-button:hover {
+  background: #e08900;
+  color: white;
+}
+
+
+
+/* 🌙 Lunar Eclipse */
+.lunar-theme {
+  background: #001e26;
+  color: #80d8ff;
+}
+
+.lunar-theme .intro-screen {
+  background: rgba(0, 30, 38, 0.9);
+}
+
+.lunar-theme .theme-btn {
+  background: #80d8ff;
+  color: #001e26;
+}
+
+.lunar-theme .wrapper {
+  background: #002a3a;
+  border-color: #80d8ff;
+}
+
+.lunar-theme .game-details {
+  color: #a7e6ff;
+}
+
+.lunar-theme .play-board {
+  background: #011920;
+}
+
+.lunar-theme .food {
+  background: #00bcd4;
+  box-shadow: 0 0 15px #00bcd4;
+}
+
+.lunar-theme .head {
+  background: #29b6f6;
+  box-shadow: 0 0 10px #29b6f6;
+}
+.lunar-theme .start-button {
+  background: #80d8ff;
+  color: #001e26;
+  border: 2px solid #a7e6ff;
+}
+
+.lunar-theme .start-button:hover {
+  background: #5fc4eb;
+  color: white;
+}
+
+/* ⚫ Total Eclipse */
+.total-theme {
+  background: black;
+  color: white;
+}
+
+.total-theme .intro-screen {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.total-theme .theme-btn {
+  background: white;
+  color: black;
+}
+
+.total-theme .wrapper {
+  background: #0d0d0d;
+  border-color: white;
+}
+
+.total-theme .game-details {
+  color: #e0e0e0;
+}
+
+.total-theme .play-board {
+  background: #0d0d0d;
+}
+
+.total-theme .food {
+  background: white;
+  box-shadow: 0 0 15px white;
+}
+
+.total-theme .head {
+  background: #bdbdbd;
+  box-shadow: 0 0 10px white;
+}
+/* ⚫ Total Eclipse */
+.total-theme .start-button {
+  background: white;
+  color: black;
+  border: 2px solid #e0e0e0;
+}
+
+.total-theme .start-button:hover {
+  background: #e0e0e0;
+  color: black;
+}
+
+/* 🌌 Void Theme */
+.void-theme {
+  background: #080016;
+  color: #b075ff;
+}
+
+.void-theme .intro-screen {
+  background: rgba(8, 0, 22, 0.9);
+}
+
+.void-theme .theme-btn {
+  background: #b075ff;
+  color: #080016;
+}
+
+.void-theme .wrapper {
+  background: #14002b;
+  border-color: #b075ff;
+}
+
+.void-theme .game-details {
+  color: #d1aaff;
+}
+
+.void-theme .play-board {
+  background: #0d001f;
+}
+
+.void-theme .food {
+  background: #9a00ff;
+  box-shadow: 0 0 15px #9a00ff;
+}
+
+.void-theme .head {
+  background: #6100a8;
+  box-shadow: 0 0 10px #6100a8;
+}
+.void-theme .start-button {
+  background: #b075ff;
+  color: #080016;
+  border: 2px solid #d1aaff;
+}
+
+.void-theme .start-button:hover {
+  background: #9a60e6;
+  color: white;
+}
+
+
+ 🌠 Aurora Theme 
+.aurora-theme {
+  background: radial-gradient(circle at top, #00ffcc, #0055ff, #5500aa, #220033);
+  color: #80ffe6;
+}
+
+.aurora-theme .intro-screen {
+  background: rgba(0, 34, 51, 0.9);
+}
+
+.aurora-theme .theme-btn {
+  background: #80ffe6;
+  color: #220033;
+}
+
+.aurora-theme .wrapper {
+  background: linear-gradient(135deg, #002244, #001122);
+  border-color: #80ffe6;
+}
+
+.aurora-theme .game-details {
+  color: #a3ffff;
+}
+
+.aurora-theme .play-board {
+  background: linear-gradient(135deg, #002244, #001122);
+}
+
+.aurora-theme .food {
+  background: linear-gradient(45deg, #ff66ff, #33ccff);
+  box-shadow: 0 0 10px #33ccff, 0 0 20px #ff66ff;
+}
+
+.aurora-theme .head {
+  background: linear-gradient(45deg, #99ffcc, #00ff99);
+  box-shadow: 0 0 10px #00ff99, 0 0 20px #99ffcc;
+}
+
+.aurora-theme .start-button {
+  background: linear-gradient(45deg, #33ccff, #ff66ff);
+  color: white;
+  border: 2px solid #80ffe6;
+}
+
+.aurora-theme .start-button:hover {
+  background: linear-gradient(45deg, #ff66ff, #33ccff);
+  color: #220033;
+}
+/*  */
+.instructions {
+  font-size: 1.2rem;
+  margin-top: 15px;
+  line-height: 1.6;
   text-align: center;
-  font-size: 1.3rem;
-  color: #d5b8dc;
-  width: calc(100% / 4);
-  cursor: pointer;
-  border-right: 1px solid #171B26;
+  max-width: 400px;
+  padding: 10px;
+  border-radius: 10px;
 }
 
-@media screen and (max-width: 800px) {
-  .wrapper {
-    width: 90vmin;
-    height: 115vmin;
-  }
-  .game-details {
-    font-size: 1rem;
-    padding: 15px 27px;
-  }
-  .controls {
-    display: flex;
-  }
-  .controls i {
-    padding: 15px 0;
-    font-size: 1rem;
-  }
+/* General Pause Button Styling */
+#pause-game {
+  font-size: 16px;
+  padding: 8px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Solar Theme */
+.solar-theme #pause-game {
+  background: #ffcc00;
+  color: #333;
+}
+
+.solar-theme #pause-game:hover {
+  background: #ffaa00;
+}
+
+/* Lunar Theme */
+.lunar-theme #pause-game {
+  background: #445566;
+  color: #fff;
+}
+
+.lunar-theme #pause-game:hover {
+  background: #2c3e50;
+}
+
+/* Total Eclipse Theme */
+.total-theme #pause-game {
+  background: #222;
+  color: #fff;
+}
+
+.total-theme #pause-game:hover {
+  background: #111;
+}
+
+
+.void-theme #pause-game {
+  background: #550055;
+  color: #fff;
+}
+
+.void-theme #pause-game:hover {
+  background: #770077;
+}
+
+Aurora Theme 
+.aurora-theme #pause-game {
+  background: #00cc99;
+  color: #fff;
+}
+
+.aurora-theme #pause-game:hover {
+  background: #009977;
+}
+
+ /* === OUTBREAK THEME ===  */
+.outbreak-theme {
+  background: #1e1e1e;
+  color: #ff3f3f;
+}
+
+.outbreak-theme .intro-screen {
+  background: rgba(30, 30, 30, 0.9);
+}
+
+.outbreak-theme .theme-btn {
+  background: #ff3f3f;
+  color: #1e1e1e;
+  border: 2px solid #ff6a6a;
+}
+
+.outbreak-theme .wrapper {
+  background: #292929;
+  border-color: #ff3f3f;
+  box-shadow: 0 0 15px rgba(255, 63, 63, 0.6);
+}
+
+.outbreak-theme .game-details {
+  color: #ffb3b3;
+}
+
+.outbreak-theme .play-board {
+  background: #111111;
+}
+
+.outbreak-theme .food {
+  background: #ff6a6a;
+  box-shadow: 0 0 15px #ff6a6a;
+}
+
+.outbreak-theme .head {
+  background: #d60000;
+  box-shadow: 0 0 10px #d60000, 0 0 20px rgba(255, 63, 63, 0.8);
+}
+
+.outbreak-theme .start-button {
+  background: #ff3f3f;
+  color: #1e1e1e;
+  border: 2px solid #ff6a6a;
+}
+
+.outbreak-theme .start-button:hover {
+  background: #ff5c5c;
+  color: white;
+}
+
+
+.outbreak-theme #pause-game {
+  background: #ff3f3f;
+  color: #fff;
+}
+
+.outbreak-theme #pause-game:hover {
+  background: #ff6a6a;
 }
