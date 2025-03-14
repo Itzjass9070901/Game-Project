@@ -95,250 +95,365 @@ body {
 
 /*  Solar Eclipse (Default) */
 .solar-theme {
-  background: #1e0f00;
-  color: #ff9800;
+  background: #3c1f0a; /* Deep ember orange */
+  color: #e27219; /* Solar orange */
 }
 
 .solar-theme .intro-screen {
-  background: rgba(30, 15, 0, 0.9);
+  background: rgba(60, 31, 10, 0.9);
 }
 
 .solar-theme .theme-btn {
-  background: #ff9800;
-  color: #1e0f00;
+  background: #e27219;
+  color: #3c1f0a;
 }
 
 .solar-theme .wrapper {
-  background: #260e04;
-  border-color: #ff9800;
+  background: #4a1d07; /* Burnt orange */
+  border-color: #e27219;
 }
 
 .solar-theme .game-details {
-  color: #ffcc80;
+  color: #ffb347; /* Warm firelight yellow */
 }
 
 .solar-theme .play-board {
-  background: #120802;
+  background: #2a1105; /* Darker ember brown */
 }
 
 .solar-theme .food {
-  background: #ff4500;
-  box-shadow: 0 0 15px #ff4500;
+  background: #ff5e00; /* Bright fiery orange */
+  box-shadow: 0 0 15px #ff5e00;
 }
 
 .solar-theme .head {
-  background: #ffcc00;
-  box-shadow: 0 0 10px #ffcc00;
+  background: #ffb700; /* Solar flare yellow */
+  box-shadow: 0 0 10px #ffb700;
 }
 
-  
 .solar-theme .start-button {
-  background: #ff9800;
-  color: #1e0f00;
-  border: 2px solid #ffcc80;
+  background: #e27219;
+  color: #3c1f0a;
+  border: 2px solid #ffb347;
 }
 
 .solar-theme .start-button:hover {
-  background: #e08900;
+  background: #d06514;
   color: white;
 }
 
-
-
-/* 🌙 Lunar Eclipse */
-.lunar-theme {
-  background: #001e26;
-  color: #80d8ff;
+.solar-theme #pause-game {
+  background: #ffb700;
+  color: #3c1f0a;
 }
 
-.lunar-theme .intro-screen {
-  background: rgba(0, 30, 38, 0.9);
+.solar-theme #pause-game:hover {
+  background: #ff9e00;
 }
 
-.lunar-theme .theme-btn {
-  background: #80d8ff;
-  color: #001e26;
+
+
+
+
+.arc-theme {
+  background: #001020; /* Deep Blue Background */
+  color: #aef2f7; /* Arc Glow Text */
 }
 
-.lunar-theme .wrapper {
-  background: #002a3a;
-  border-color: #80d8ff;
+.arc-theme .intro-screen {
+  background: rgba(0, 16, 32, 0.95); /* Subtle transparency for depth */
 }
 
-.lunar-theme .game-details {
-  color: #a7e6ff;
+.arc-theme .theme-btn {
+  background: #aef2f7; /* Main Arc Energy */
+  color: #001020;
+  box-shadow: 0 0 12px #aef2f7;
 }
 
-.lunar-theme .play-board {
-  background: #011920;
+.arc-theme .wrapper {
+  background: #002840; /* Dark Arc Core */
+  border-color: #aef2f7; /* Arc Glow */
 }
 
-.lunar-theme .food {
-  background: #00bcd4;
-  box-shadow: 0 0 15px #00bcd4;
+.arc-theme .game-details {
+  color: #d6fdff; /* Softer Cyan for readability */
 }
 
-.lunar-theme .head {
-  background: #29b6f6;
-  box-shadow: 0 0 10px #29b6f6;
-}
-.lunar-theme .start-button {
-  background: #80d8ff;
-  color: #001e26;
-  border: 2px solid #a7e6ff;
+.arc-theme .play-board {
+  background: #011a33; /* Deep Blue-Green */
 }
 
-.lunar-theme .start-button:hover {
-  background: #5fc4eb;
-  color: white;
+.arc-theme .food {
+  background: #aef2f7; /* Arc Spark */
+  box-shadow: 0 0 22px #aef2f7;
 }
+
+.arc-theme .head {
+  background: #72e6f7; /* Lighter Arc Blue */
+  box-shadow: 0 0 18px #72e6f7;
+}
+
+.arc-theme .start-button {
+  background: #aef2f7;
+  color: #001020;
+  border: 2px solid #d6fdff;
+  transition: 0.3s ease-in-out;
+}
+
+.arc-theme .start-button:hover {
+  background: #d6fdff;
+  color: #001020;
+  box-shadow: 0 0 18px #d6fdff;
+}
+
+.arc-theme #pause-game {
+  background: #223344;
+  color: #fff;
+}
+
+.arc-theme #pause-game:hover {
+  background: #112233;
+}
+
+
 
 /* ⚫ Total Eclipse */
-.total-theme {
-  background: black;
+.strand-theme {
+  background: radial-gradient(circle at top, #00a368, #005f3f, #00261a);
+  color: #8cffc1; /* Vibrant Strand green */
+}
+
+.strand-theme .intro-screen {
+  background: rgba(0, 38, 26, 0.9);
+}
+
+.strand-theme .theme-btn {
+  background: #8cffc1;
+  color: #00261a;
+}
+
+.strand-theme .wrapper {
+  background: linear-gradient(135deg, #003a26, #001a12);
+  border-color: #8cffc1;
+}
+
+.strand-theme .game-details {
+  color: #b3ffd9; /* Soft ethereal glow */
+}
+
+.strand-theme .play-board {
+  background: linear-gradient(135deg, #003a26, #001a12);
+}
+
+.strand-theme .food {
+  background: linear-gradient(45deg, #00ff99, #33ffcc);
+  box-shadow: 0 0 15px #00ff99, 0 0 25px #33ffcc;
+}
+
+.strand-theme .head {
+  background: linear-gradient(45deg, #33ff99, #00cc66);
+  box-shadow: 0 0 10px #33ff99, 0 0 20px #00cc66;
+}
+
+/* 🌿 Woven Energy */
+.strand-theme .start-button {
+  background: linear-gradient(45deg, #00ff99, #00cc66);
   color: white;
+  border: 2px solid #8cffc1;
 }
 
-.total-theme .intro-screen {
-  background: rgba(0, 0, 0, 0.9);
+.strand-theme .start-button:hover {
+  background: linear-gradient(45deg, #00cc66, #00ff99);
+  color: #00261a;
 }
 
-.total-theme .theme-btn {
-  background: white;
-  color: black;
+.strand-theme #pause-game {
+  background: #007a4d;
+  color: #fff;
 }
 
-.total-theme .wrapper {
-  background: #0d0d0d;
-  border-color: white;
+.strand-theme #pause-game:hover {
+  background: #005f3f;
 }
 
-.total-theme .game-details {
-  color: #e0e0e0;
-}
-
-.total-theme .play-board {
-  background: #0d0d0d;
-}
-
-.total-theme .food {
-  background: white;
-  box-shadow: 0 0 15px white;
-}
-
-.total-theme .head {
-  background: #bdbdbd;
-  box-shadow: 0 0 10px white;
-}
-/* ⚫ Total Eclipse */
-.total-theme .start-button {
-  background: white;
-  color: black;
-  border: 2px solid #e0e0e0;
-}
-
-.total-theme .start-button:hover {
-  background: #e0e0e0;
-  color: black;
-}
 
 /* 🌌 Void Theme */
 .void-theme {
-  background: #080016;
-  color: #b075ff;
+  background: #0b0020; /* Deep space purple */
+  color: #8464da; /* Void energy violet */
 }
 
 .void-theme .intro-screen {
-  background: rgba(8, 0, 22, 0.9);
+  background: rgba(11, 0, 32, 0.9);
 }
 
 .void-theme .theme-btn {
-  background: #b075ff;
-  color: #080016;
+  background: #8464da;
+  color: #0b0020;
 }
 
 .void-theme .wrapper {
-  background: #14002b;
-  border-color: #b075ff;
+  background: #1a0033; /* Darker void purple */
+  border-color: #8464da;
 }
 
 .void-theme .game-details {
-  color: #d1aaff;
+  color: #b89cff; /* Lighter void glow */
 }
 
 .void-theme .play-board {
-  background: #0d001f;
+  background: #100026; /* Deep void abyss */
 }
 
 .void-theme .food {
-  background: #9a00ff;
-  box-shadow: 0 0 15px #9a00ff;
+  background: #a463ff; /* Radiant void energy */
+  box-shadow: 0 0 15px #a463ff;
 }
 
 .void-theme .head {
-  background: #6100a8;
-  box-shadow: 0 0 10px #6100a8;
+  background: #6d33cc; /* Void essence */
+  box-shadow: 0 0 10px #6d33cc;
 }
+
 .void-theme .start-button {
-  background: #b075ff;
-  color: #080016;
-  border: 2px solid #d1aaff;
+  background: #8464da;
+  color: #0b0020;
+  border: 2px solid #b89cff;
 }
 
 .void-theme .start-button:hover {
-  background: #9a60e6;
+  background: #7354c4;
   color: white;
 }
 
-
- 🌠 Aurora Theme 
-.aurora-theme {
-  background: radial-gradient(circle at top, #00ffcc, #0055ff, #5500aa, #220033);
-  color: #80ffe6;
+.void-theme #pause-game {
+  background: #4e0080; /* Deep void core */
+  color: #fff;
 }
 
-.aurora-theme .intro-screen {
-  background: rgba(0, 34, 51, 0.9);
+.void-theme #pause-game:hover {
+  background: #6800a8;
 }
 
-.aurora-theme .theme-btn {
-  background: #80ffe6;
-  color: #220033;
+
+.stasis-theme {
+  background: radial-gradient(circle at top, #3851a3, #1e2f66, #101a40, #050a1a);
+  color: #a3c4ff; /* Frosty ice blue */
 }
 
-.aurora-theme .wrapper {
-  background: linear-gradient(135deg, #002244, #001122);
-  border-color: #80ffe6;
+.stasis-theme .intro-screen {
+  background: rgba(5, 10, 26, 0.9);
 }
 
-.aurora-theme .game-details {
-  color: #a3ffff;
+.stasis-theme .theme-btn {
+  background: #a3c4ff;
+  color: #050a1a;
 }
 
-.aurora-theme .play-board {
-  background: linear-gradient(135deg, #002244, #001122);
+.stasis-theme .wrapper {
+  background: linear-gradient(135deg, #1a2b55, #0a1a33);
+  border-color: #a3c4ff;
 }
 
-.aurora-theme .food {
-  background: linear-gradient(45deg, #ff66ff, #33ccff);
-  box-shadow: 0 0 10px #33ccff, 0 0 20px #ff66ff;
+.stasis-theme .game-details {
+  color: #c5d9ff; /* Frozen glow */
 }
 
-.aurora-theme .head {
-  background: linear-gradient(45deg, #99ffcc, #00ff99);
-  box-shadow: 0 0 10px #00ff99, 0 0 20px #99ffcc;
+.stasis-theme .play-board {
+  background: linear-gradient(135deg, #1a2b55, #0a1a33);
 }
 
-.aurora-theme .start-button {
-  background: linear-gradient(45deg, #33ccff, #ff66ff);
+.stasis-theme .food {
+  background: linear-gradient(45deg, #66b3ff, #99ccff);
+  box-shadow: 0 0 10px #66b3ff, 0 0 20px #99ccff;
+}
+
+.stasis-theme .head {
+  background: linear-gradient(45deg, #99ccff, #66b3ff);
+  box-shadow: 0 0 10px #66b3ff, 0 0 20px #99ccff;
+}
+
+.stasis-theme .start-button {
+  background: linear-gradient(45deg, #3851a3, #66b3ff);
   color: white;
-  border: 2px solid #80ffe6;
+  border: 2px solid #a3c4ff;
 }
 
-.aurora-theme .start-button:hover {
-  background: linear-gradient(45deg, #ff66ff, #33ccff);
-  color: #220033;
+.stasis-theme .start-button:hover {
+  background: linear-gradient(45deg, #66b3ff, #3851a3);
+  color: #050a1a;
 }
+
+.stasis-theme #pause-game {
+  background: #3851a3;
+  color: #fff;
+}
+
+.stasis-theme #pause-game:hover {
+  background: #2a3d80;
+}
+
+ /* === OUTBREAK THEME ===  */
+ .siva-theme {
+  background: linear-gradient(135deg, #1a1a1a, #0d0d0d);
+  color: #ff2d2d; /* SIVA red */
+}
+
+.siva-theme .intro-screen {
+  background: rgba(26, 26, 26, 0.9);
+}
+
+.siva-theme .theme-btn {
+  background: #ff2d2d;
+  color: #1a1a1a;
+  border: 2px solid #ff5555;
+}
+
+.siva-theme .wrapper {
+  background: linear-gradient(135deg, #292929, #141414);
+  border-color: #ff2d2d;
+  box-shadow: 0 0 20px rgba(255, 45, 45, 0.8);
+}
+
+.siva-theme .game-details {
+  color: #ff9999;
+}
+
+.siva-theme .play-board {
+  background: #0d0d0d;
+}
+
+.siva-theme .food {
+  background: linear-gradient(45deg, #ff4444, #ff1111);
+  box-shadow: 0 0 20px #ff1111, 0 0 30px rgba(255, 45, 45, 0.9);
+}
+
+.siva-theme .head {
+  background: linear-gradient(45deg, #990000, #ff0000);
+  box-shadow: 0 0 15px #ff0000, 0 0 25px rgba(255, 45, 45, 0.8);
+}
+
+.siva-theme .start-button {
+  background: linear-gradient(45deg, #ff2d2d, #990000);
+  color: white;
+  border: 2px solid #ff5555;
+}
+
+.siva-theme .start-button:hover {
+  background: linear-gradient(45deg, #ff5555, #cc0000);
+  color: #1a1a1a;
+}
+
+.siva-theme #pause-game {
+  background: #ff2d2d;
+  color: #fff;
+}
+
+.siva-theme #pause-game:hover {
+  background: #cc0000;
+}
+
+
 /*  */
 .instructions {
   font-size: 1.2rem;
@@ -361,113 +476,11 @@ body {
   transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* Solar Theme */
-.solar-theme #pause-game {
-  background: #ffcc00;
-  color: #333;
-}
-
-.solar-theme #pause-game:hover {
-  background: #ffaa00;
-}
-
-/* Lunar Theme */
-.lunar-theme #pause-game {
-  background: #445566;
-  color: #fff;
-}
-
-.lunar-theme #pause-game:hover {
-  background: #2c3e50;
-}
-
-/* Total Eclipse Theme */
-.total-theme #pause-game {
-  background: #222;
-  color: #fff;
-}
-
-.total-theme #pause-game:hover {
-  background: #111;
-}
-
-
-.void-theme #pause-game {
-  background: #550055;
-  color: #fff;
-}
-
-.void-theme #pause-game:hover {
-  background: #770077;
-}
-
-Aurora Theme 
-.aurora-theme #pause-game {
-  background: #00cc99;
-  color: #fff;
-}
-
-.aurora-theme #pause-game:hover {
-  background: #009977;
-}
-
- /* === OUTBREAK THEME ===  */
-.outbreak-theme {
-  background: #1e1e1e;
-  color: #ff3f3f;
-}
-
-.outbreak-theme .intro-screen {
-  background: rgba(30, 30, 30, 0.9);
-}
-
-.outbreak-theme .theme-btn {
-  background: #ff3f3f;
-  color: #1e1e1e;
-  border: 2px solid #ff6a6a;
-}
-
-.outbreak-theme .wrapper {
-  background: #292929;
-  border-color: #ff3f3f;
-  box-shadow: 0 0 15px rgba(255, 63, 63, 0.6);
-}
-
-.outbreak-theme .game-details {
-  color: #ffb3b3;
-}
-
-.outbreak-theme .play-board {
-  background: #111111;
-}
-
-.outbreak-theme .food {
-  background: #ff6a6a;
-  box-shadow: 0 0 15px #ff6a6a;
-}
-
-.outbreak-theme .head {
-  background: #d60000;
-  box-shadow: 0 0 10px #d60000, 0 0 20px rgba(255, 63, 63, 0.8);
-}
-
-.outbreak-theme .start-button {
-  background: #ff3f3f;
-  color: #1e1e1e;
-  border: 2px solid #ff6a6a;
-}
-
-.outbreak-theme .start-button:hover {
-  background: #ff5c5c;
-  color: white;
-}
-
-
-.outbreak-theme #pause-game {
-  background: #ff3f3f;
-  color: #fff;
-}
-
-.outbreak-theme #pause-game:hover {
-  background: #ff6a6a;
+.start-button {
+  font-size: 16px;
+  padding: 8px 15px;
+  border: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
 }
