@@ -93,7 +93,7 @@ body {
 
 /* === THEMES === */
 
-/*  Solar Eclipse (Default) */
+/*  Solar (Default) */
 .solar-theme {
   background: #3c1f0a; /* Deep ember orange */
   color: #e27219; /* Solar orange */
@@ -216,8 +216,6 @@ body {
 }
 
 
-
-/* ⚫ Total Eclipse */
 .strand-theme {
   background: radial-gradient(circle at top, #00a368, #005f3f, #00261a);
   color: #8cffc1; /* Vibrant Strand green */
